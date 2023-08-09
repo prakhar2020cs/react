@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-image: url(foggy-landscape-forest-in-the-morning-beautiful-sunrise-mist-cover-mountain-background-at-countryside-winter-free-photo.webp); background-size:cover">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="card">
+          <div class="card-header bg-primary">
+            <h3 class="text-center" style="color: whitesmoke;">Registration</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullname" placeholder="Enter your full name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Userid</label>
+                <input type="text" class="form-control" id="username" placeholder="Choose a username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label" >Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Choose a password">
+              </div>
+              <div class="mb-3">
+                <label for="repass" class="form-label" >Re Enter Password</label>
+                <input type="password" class="form-control" onchange="vali()" id="repass" placeholder="Choose a password">
+                <p id="err"></p>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agree">
+                <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+                <a  class="mx-3" href="signinn.html">Already have an account?</a>
+              </div>
+              <div class="d-grid">
+                <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-4">
+                    <button type="submit" class="btn btn-primary" >Register</button>
+                    
+                  </div>
+                  <div class="col-4"><button  class="btn btn-danger" onclick="Reset()" >Reset</button></div>
+                </div>
+            
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+       function vali(){
+            let pass = document.getElementById('pass');
+            let repass = document.getElementById('repass');
+            if(pass.value!=repass.value){
+                document.getElementById('err').innerHTML='enter same password';
+                document.getElementById('err').style.color='red';
+                pass.value='';
+        
+            }
+            else{
+                document.getElementById('err').innerHTML='valid';
+                document.getElementById('err').style.color='green';
+
+            } 
+
+        }
+
+        function Reset(){
+          document.getElementById("pass").value="";
+          document.getElementById("repass").value="";
+          document.getElementById("email").value="";
+          document.getElementById("userid").value="";
+          document.getElementById("fullname").value="";
+
+        }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        function Click() {
+            const name = document.getElementById('abc').value;
+            document.getElementById('h3').innerHTML = "Welcome " + name;
+        }
+    </script>
+</head>
+<body>
+    
+    <h3 id="h3">Welcome</h3>
+    <input type="text" id="abc" placeholder="write your name"> <br> <br>
+    <button onclick="Click()">Click me</button>
+        
+</body>
+</html>

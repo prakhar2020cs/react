@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    
+    <script>
+        
+             
+        
+        
+    </script>
+</head>
+<body style="background-color: aqua;">
+    <div class="container">
+        <div class="bg-primary mt-3" >
+            <h1 style="background-color: rgb(55, 182, 220);"> Registration form</h1>
+        </div>
+        <form style="background: #15cde9;">
+            <div>
+              <label class="form-label">Email</label>
+              <input type="'text" class="form-control" placeholder="abc@gmail.com" required>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">password</label>
+                <input id="pass" type="password" class="form-control"placeholder="create password" required>
+            </div> 
+            <div class="mt-3">
+                <label class="form-label">re-enterpassword</label>
+                <input id ='repass' onchange="vali()" type="password" class="form-control" placeholder="re enter password" required>
+                 <p id="err"></p>
+              </div><br> 
+            <h4>Personal information</h4>
+            <div>
+                <label class="form-label" >Name</label>
+                <input type="'text" class="form-control" placeholder="enter your name here" required>
+              </div>
+              <div>
+                <label class="form-label">roll no</label>
+                <input type="'text" class="form-control"placeholder="university roll no" required>
+              </div>
+              <div>
+                <label class="form-label">Branch</label>
+                <input type="'text" class="form-control" value="cse">
+              </div><br>
+              <h5>section</h5>
+            <div><input type="radio" id="1" name='a'onclick="table()">1
+                <input type="radio" id="2" name="a"onclick="table()">2
+                <input type="radio" id="3"name='a'onclick="table()">3 
+            
+
+                
+            </div><br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                <label class="form-check-label" for="flexCheckDefault">
+                  i have read and agreed to the terms and conditions
+                </label>
+              </div> 
+              
+            
+              
+                <div style="align-items: center;display: flex;justify-content: center;">
+                    <input type="submit" class="btn bg-primary" onclick="abc()" > <br><br>
+                    <input type="reset" class="btn bg-primary">
+                </div>
+                
+
+                
+           
+           
+
+            
+        </form>
+
+    </div>
+    <script>
+      function vali(){
+            let pass = document.getElementById('pass');
+            let repass = document.getElementById('repass');
+            if(pass.value!=repass.value){
+                document.getElementById('err').innerHTML='enter same password';
+                document.getElementById('err').style.color='red';
+                pass.value='';
+                repass.value='';
+        
+            }
+            else{
+                document.getElementById('err').innerHTML='valid';
+                document.getElementById('err').style.color='green';
+
+            } 
+
+        }
+        function abc(){
+        const x= console.log( document.getElementsByTagName('gender'))
+        for(let val of x){
+          if (val.checked) {
+            console.log(val.value)
+          }
+
+
+        }
+        }
+
+        // storin values in map
+        
+
+    </script>
+   
+   
+    
+</body>
+</html>
+
+
+
